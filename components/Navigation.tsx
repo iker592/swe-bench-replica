@@ -18,7 +18,7 @@ export default function Navigation() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           <Link href="/" className="flex items-center space-x-2">
-            <div className="text-xl font-bold text-gray-900">SWE-bench</div>
+            <div className="text-xl font-bold text-gray-900">Agents Benchmark</div>
           </Link>
           <div className="flex space-x-8">
             {navItems.map((item) => {

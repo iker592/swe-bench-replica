@@ -10,31 +10,31 @@ interface NewsItem {
 const newsItems: NewsItem[] = [
   {
     date: "2024-01-15",
-    title: "SWE-bench Lite Released",
+    title: "Agents Benchmark Lite Released",
     category: "Release",
     content:
-      "We're excited to announce SWE-bench Lite, a smaller subset of 300 instances perfect for quick evaluations and development.",
+      "We're excited to announce Agents Benchmark Lite, a smaller subset of 300 instances perfect for quick evaluations and development.",
   },
   {
     date: "2024-01-10",
     title: "New Leaderboard Entries",
     category: "Update",
     content:
-      "Five new models have been added to the leaderboard this week, including several open-source alternatives.",
+      "Five new agents have been added to the leaderboard this week, including several open-source alternatives.",
   },
   {
     date: "2024-01-05",
     title: "Paper Accepted at ICSE 2024",
     category: "Research",
     content:
-      "Our paper on SWE-bench has been accepted for presentation at the International Conference on Software Engineering.",
+      "Our paper on Agents Benchmark has been accepted for presentation at the International Conference on Software Engineering.",
   },
   {
     date: "2023-12-20",
     title: "Dataset Expansion",
     category: "Update",
     content:
-      "SWE-bench now includes 2,294 test instances across 12 popular open-source repositories, up from 1,000 in the initial release.",
+      "Agents Benchmark now includes 2,294 test instances across 12 popular open-source repositories, up from 1,000 in the initial release.",
   },
   {
     date: "2023-12-10",
@@ -60,7 +60,7 @@ export default function News() {
             News & Updates
           </h1>
           <p className="mt-4 text-lg text-gray-600">
-            Stay up to date with the latest SWE-bench developments
+            Stay up to date with the latest Agents Benchmark developments
           </p>
         </div>
 

@@ -1,78 +1,80 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { Trophy, TrendingUp, CheckCircle2 } from "lucide-react";
+import { slugify } from "@/lib/utils";
 
-interface ModelResult {
+interface AgentResult {
   rank: number;
-  model: string;
+  agent: string;
   organization: string;
   passRate: number;
   instances: number;
   trend: "up" | "down" | "stable";
 }
 
-const mockData: ModelResult[] = [
+const mockData: AgentResult[] = [
   {
     rank: 1,
-    model: "Claude Sonnet 4.5",
-    organization: "Anthropic",
+    agent: "CodeForge Alpha",
+    organization: "TechCorp AI",
     passRate: 89.2,
     instances: 2047,
     trend: "up",
   },
   {
     rank: 2,
-    model: "GPT-4o",
-    organization: "OpenAI",
+    agent: "DevBot Nexus",
+    organization: "InnovateLabs",
     passRate: 87.5,
     instances: 2047,
     trend: "up",
   },
   {
     rank: 3,
-    model: "GPT-4 Turbo",
-    organization: "OpenAI",
+    agent: "SyntaxMaster Pro",
+    organization: "CodeGen Systems",
     passRate: 82.3,
     instances: 2047,
     trend: "stable",
   },
   {
     rank: 4,
-    model: "Claude Opus 3",
-    organization: "Anthropic",
+    agent: "AutoFix Agent",
+    organization: "DevTools Inc",
     passRate: 79.8,
     instances: 2047,
     trend: "down",
   },
   {
     rank: 5,
-    model: "Gemini Pro 1.5",
-    organization: "Google",
+    agent: "SwiftCoder Agent",
+    organization: "AgileAI",
     passRate: 76.4,
     instances: 2047,
     trend: "up",
   },
   {
     rank: 6,
-    model: "Llama 3.1 405B",
-    organization: "Meta",
+    agent: "PrecisionFix",
+    organization: "SmartDev Solutions",
     passRate: 71.2,
     instances: 2047,
     trend: "up",
   },
   {
     rank: 7,
-    model: "Mixtral 8x22B",
-    organization: "Mistral AI",
+    agent: "CodeWizard",
+    organization: "NextGen AI",
     passRate: 68.9,
     instances: 2047,
     trend: "stable",
   },
   {
     rank: 8,
-    model: "CodeLlama 70B",
-    organization: "Meta",
+    agent: "BugHunter Agent",
+    organization: "DebugTech",
     passRate: 65.3,
     instances: 2047,
     trend: "down",
@@ -90,7 +92,7 @@ export default function Leaderboard() {
             Leaderboard
           </h1>
           <p className="mt-4 text-lg text-gray-600">
-            Compare model performance on SWE-bench test instances
+            Compare agent performance on benchmark test instances
           </p>
         </div>
 
@@ -104,7 +106,7 @@ export default function Leaderboard() {
                 : "border-transparent text-gray-500 hover:text-gray-700"
             }`}
           >
-            All Models
+            All Agents
           </button>
           <button
             onClick={() => setFilter("recent")}
@@ -127,7 +129,7 @@ export default function Leaderboard() {
                   Rank
                 </th>
                 <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500">
-                  Model
+                  Agent
                 </th>
                 <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500">
                   Organization
@@ -168,9 +170,12 @@ export default function Leaderboard() {
                     </div>
                   </td>
                   <td className="whitespace-nowrap px-6 py-4">
-                    <div className="text-sm font-medium text-gray-900">
-                      {result.model}
-                    </div>
+                    <Link
+                      href={`/leaderboard/${slugify(result.agent)}`}
+                      className="text-sm font-medium text-blue-600 hover:text-blue-700 hover:underline"
+                    >
+                      {result.agent}
+                    </Link>
                   </td>
                   <td className="whitespace-nowrap px-6 py-4">
                     <div className="text-sm text-gray-500">
@@ -218,9 +223,9 @@ export default function Leaderboard() {
         {/* Info Box */}
         <div className="mt-8 rounded-lg bg-blue-50 p-4">
           <p className="text-sm text-blue-800">
-            <strong>Note:</strong> Results are based on the SWE-bench test set
+            <strong>Note:</strong> Results are based on the benchmark test set
             with 2,294 instances across 12 repositories. Pass rate indicates the
-            percentage of instances where the model successfully resolved the
+            percentage of instances where the agent successfully resolved the
             issue.
           </p>
         </div>
@@ -228,4 +233,3 @@ export default function Leaderboard() {
     </div>
   );
 }
-

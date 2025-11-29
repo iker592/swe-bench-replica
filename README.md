@@ -1,11 +1,11 @@
-# SWE-bench Replica
+# Agents Benchmark
 
-A modern replica of the SWE-bench website built with Next.js, TypeScript, and Tailwind CSS.
+A modern benchmark website for evaluating AI agents built with Next.js, TypeScript, and Tailwind CSS.
 
 ## Features
 
-- **Homepage**: Beautiful hero section with overview of SWE-bench
-- **Leaderboard**: Interactive leaderboard showing model rankings and performance metrics
+- **Homepage**: Beautiful hero section with overview of Agents Benchmark
+- **Leaderboard**: Interactive leaderboard showing agent rankings and performance metrics
 - **Documentation**: Comprehensive documentation section with guides and examples
 - **News**: News and updates section with latest announcements
 - **Responsive Design**: Fully responsive and mobile-friendly
@@ -30,10 +30,11 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 ## Project Structure
 
 ```
-swe-bench-replica/
+agents-bench-replica/
 ├── app/
 │   ├── page.tsx          # Homepage
 │   ├── leaderboard/      # Leaderboard page
+│   │   └── [agent]/      # Agent detail pages
 │   ├── docs/             # Documentation page
 │   ├── news/             # News page
 │   ├── layout.tsx        # Root layout
@@ -41,7 +42,8 @@ swe-bench-replica/
 ├── components/
 │   ├── Navigation.tsx    # Navigation component
 │   └── Footer.tsx        # Footer component
-└── public/               # Static assets
+└── lib/
+    └── utils.ts          # Utility functions
 ```
 
 ## Technologies Used
@@ -55,4 +57,3 @@ swe-bench-replica/
 
 - [Next.js Documentation](https://nextjs.org/docs)
 - [Tailwind CSS Documentation](https://tailwindcss.com/docs)
-- [SWE-bench Original](https://www.swebench.com/)

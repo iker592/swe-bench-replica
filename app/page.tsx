@@ -8,10 +8,10 @@ export default function Home() {
       <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
         <div className="text-center">
           <h1 className="text-5xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-            SWE-bench
+            Agents Benchmark
           </h1>
           <p className="mt-6 text-xl leading-8 text-gray-600">
-            A benchmark for evaluating large language models on real-world
+            A benchmark for evaluating AI agents on real-world
             software engineering tasks
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-6">
@@ -35,10 +35,10 @@ export default function Home() {
       <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            What is SWE-bench?
+            What is Agents Benchmark?
           </h2>
           <p className="mt-4 text-lg leading-8 text-gray-600">
-            SWE-bench provides a comprehensive evaluation framework for
+            Agents Benchmark provides a comprehensive evaluation framework for
             assessing the capabilities of AI agents in real-world software
             engineering scenarios.
           </p>
@@ -52,7 +52,7 @@ export default function Home() {
               Real GitHub Issues
             </h3>
             <p className="mt-2 text-base leading-7 text-gray-600">
-              Test your models on actual issues from popular open-source
+              Test your agents on actual issues from popular open-source
               repositories, ensuring realistic evaluation scenarios.
             </p>
           </div>
@@ -77,7 +77,7 @@ export default function Home() {
             </h3>
             <p className="mt-2 text-base leading-7 text-gray-600">
               Simple API and evaluation tools make it easy to benchmark your
-              models and compare results with the community.
+              agents and compare results with the community.
             </p>
           </div>
         </div>
@@ -102,7 +102,7 @@ export default function Home() {
             <div className="text-center">
               <div className="text-4xl font-bold text-white">50+</div>
               <div className="mt-2 text-sm font-medium text-gray-400">
-                Models Evaluated
+                Agents Evaluated
               </div>
             </div>
           </div>
@@ -117,7 +117,7 @@ export default function Home() {
               Ready to get started?
             </h2>
             <p className="mt-6 text-lg leading-8 text-blue-100">
-              Explore the documentation to learn how to evaluate your models or
+              Explore the documentation to learn how to evaluate your agents or
               check out the leaderboard to see current results.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">

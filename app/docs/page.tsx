@@ -16,7 +16,7 @@ export default function Documentation() {
     {
       title: "Dataset",
       icon: FileText,
-      description: "Understand the structure and contents of SWE-bench",
+      description: "Understand the structure and contents of Agents Benchmark",
       items: [
         "Dataset Overview",
         "Repository Selection",
@@ -27,7 +27,7 @@ export default function Documentation() {
     {
       title: "Evaluation",
       icon: Code,
-      description: "Learn how to evaluate your models",
+      description: "Learn how to evaluate your agents",
       items: [
         "Evaluation Framework",
         "Running Evaluations",
@@ -55,8 +55,8 @@ export default function Documentation() {
             Documentation
           </h1>
           <p className="mt-4 text-lg text-gray-600">
-            Comprehensive guide to using SWE-bench for evaluating software
-            engineering agents
+            Comprehensive guide to using Agents Benchmark for evaluating AI
+            agents
           </p>
         </div>
 
@@ -138,15 +138,15 @@ export default function Documentation() {
             Quick Start Example
           </h3>
           <pre className="overflow-x-auto text-sm text-gray-300">
-            <code>{`# Install SWE-bench
-pip install swe-bench
+            <code>{`# Install Agents Benchmark
+pip install agents-bench
 
 # Run evaluation
-from swe_bench import SWEBench
+from agents_bench import AgentsBench
 
-bench = SWEBench()
+bench = AgentsBench()
 results = bench.evaluate(
-    model=your_model,
+    agent=your_agent,
     instances="test",
     verbose=True
 )
@@ -164,8 +164,8 @@ print(f"Instances Solved: {results.solved}/{results.total}")`}</code>
             Download the Dataset
           </h3>
           <p className="mt-2 text-blue-100">
-            Get access to the full SWE-bench dataset and start evaluating your
-            models today.
+            Get access to the full Agents Benchmark dataset and start evaluating your
+            agents today.
           </p>
           <div className="mt-6">
             <a

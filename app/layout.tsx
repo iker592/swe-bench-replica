@@ -10,8 +10,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "SWE-bench - Benchmark for Evaluating Software Engineering Agents",
-  description: "A benchmark for evaluating large language models on real-world software issues from GitHub",
+  title: "Agents Benchmark - Evaluating AI Agent Performance",
+  description: "A benchmark for evaluating AI agents on real-world software engineering tasks",
 };
 
 export default function RootLayout({
